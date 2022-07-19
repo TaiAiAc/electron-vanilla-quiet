@@ -1,0 +1,42 @@
+{
+  "asar": false,
+  "nsis": {
+    "oneClick": false,
+    "language": "2052",
+    "perMachine": true,
+    "allowElevation": true,
+    "allowToChangeInstallationDirectory": true,
+    "runAfterFinish": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  },
+  "productName": "electron-vanilla",
+  "appId": "com.electron.vanilla",
+  "directories": {
+    "output": "build"
+  },
+  "files": ["src/**/*"],
+  "win": {
+    "target": "nsis",
+    "requestedExecutionLevel": "highestAvailable"
+  },
+  "dmg": {
+    "contents": [
+      {
+        "x": 410,
+        "y": 150,
+        "type": "link",
+        "path": "/Applications"
+      },
+      {
+        "x": 130,
+        "y": 150,
+        "type": "file"
+      }
+    ]
+  },
+  "mac": {},
+  "linux": {
+    "target": "deb"
+  }
+}
